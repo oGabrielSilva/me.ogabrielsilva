@@ -1,6 +1,7 @@
 import { AppContext } from '@/context/AppContext';
 import { useContext, useEffect, useRef } from 'react';
 import Skill from './Skill';
+import ButtonCloseCards from './ButtonCloseCards';
 
 export default function ServicesCard() {
   const { currentCard, strings } = useContext(AppContext);
@@ -28,8 +29,10 @@ export default function ServicesCard() {
 
   return (
     <div ref={cardRef} className="c-card">
+      <ButtonCloseCards />
       <div>
         <h2>Frontend</h2>
+        <div style={{ marginTop: '2rem' }}></div>
         <Skill
           skillName={strings.javascript}
           helpContent={strings.javascriptHelp}

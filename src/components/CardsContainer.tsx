@@ -63,7 +63,6 @@ export default function CardsContainer() {
       }}
       className={cardsEvent === 'ON' ? 'container-on' : 'container-off'}
     >
-      <button></button>
       <div
         style={{
           width: '90vw',

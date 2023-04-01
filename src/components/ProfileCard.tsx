@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useContext, useEffect, useRef } from 'react';
 import { Tooltip } from '@nextui-org/react';
+import ButtonCloseCards from './ButtonCloseCards';
 
 export default function ProfileCard() {
   const { strings, currentCard } = useContext(AppContext);
@@ -30,6 +31,7 @@ export default function ProfileCard() {
 
   return (
     <div className="c-card" ref={cardRef}>
+      <ButtonCloseCards />
       <div
         style={{
           display: 'flex',
@@ -80,6 +82,16 @@ export default function ProfileCard() {
             rel="noopener noreferrer"
           >
             <i className="bi bi-github"></i>
+          </Link>
+        </Tooltip>
+        <Tooltip content="Twitter" color="invert">
+          <Link
+            className="hover-b"
+            href="https://twitter.com/odev_gabriel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="bi bi-twitter"></i>
           </Link>
         </Tooltip>
         <Tooltip content="Instagram" color="invert">

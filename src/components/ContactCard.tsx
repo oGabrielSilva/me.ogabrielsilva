@@ -1,5 +1,6 @@
 import { AppContext } from '@/context/AppContext';
 import { useContext, useEffect, useRef } from 'react';
+import ButtonCloseCards from './ButtonCloseCards';
 
 export default function ContactCard() {
   const { currentCard, strings, setCardsEvent } = useContext(AppContext);
@@ -31,8 +32,9 @@ export default function ContactCard() {
 
   return (
     <div ref={cardRef} className="c-card">
+      <ButtonCloseCards />
       <h2>{strings.contact}</h2>
-      <p style={{ padding: '0 1rem' }}>
+      <p style={{ padding: '2rem 1rem 1rem' }}>
         <small>{strings.formContactExtra}</small>
       </p>
       <form
